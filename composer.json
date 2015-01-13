@@ -1,0 +1,16 @@
+{
+    "description": "Project Template",
+    "authors": [
+        {
+            "name": "Tobias Niepel",
+            "email": "mail@rollercoder.de",
+            "homepage": "http://rollercoder.de/"
+        }
+    ],
+    "require": {
+        "twig/twig": "~1.6",
+		"slim/slim": "2.*",
+		"slim/views": "0.1.*",
+		"phpmailer/phpmailer": ">5.0"
+    }
+}

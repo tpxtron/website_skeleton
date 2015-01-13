@@ -1,0 +1,27 @@
+{% extends "_layouts/main.html.twig" %}
+
+{% block content %}
+<div id="container-login">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 div col-md-8 col-md-offset-2">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>Zugangsdaten anfordern</h3>
+					</div>
+					<div class="panel-body">
+						<p>Du hast dein Passwort vergessen? Kein Problem. Gib hier deine EMail-Adresse ein und lege im nächsten Schritt ein neues Passwort fest.</p>
+						<form method="post" action="" role="form">
+							<div class="form-group">
+								<label for="email">Deine EMail-Adresse:</label>
+								<input type="email" class="form-control" id="email" name="email">
+							</div>
+							<button type="submit" class="btn btn-default">Zugangsdaten anfordern</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

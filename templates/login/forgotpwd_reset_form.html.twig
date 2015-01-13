@@ -1,0 +1,34 @@
+{% extends "layouts/main.html.twig" %}
+
+{% block content %}
+<div id="container-login">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 div col-md-8 col-md-offset-2">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>Passwort zurücksetzen</h3>
+					</div>
+					<div class="panel-body">
+						<p>Du kannst nun hier ein neues Passwort für dein Benutzerkonto festlegen.<p>
+						<form method="post" action="" role="form">
+							<div class="form-group{% if 'tooshort' in error|keys %} has-error has-feedback{% endif %}">
+								<label for="password">Dein gewünschtes neues Passwort:</label>
+								<input type="password" class="form-control" id="password" name="password" placeholder="Mindestens 6 Zeichen lang">
+								{% if 'tooshort' in error|keys %}<span class="help-block">Das von dir eingegebene Passwort ist zu kurz.</span>{% endif %}
+							</div>
+							<div class="form-group{% if 'dontmatch' in error|keys %} has-error has-feedback{% endif %}">
+								<label for="passwordrepeat">Neues Passwort wiederholen:</label>
+								<input type="password" class="form-control" id="passwordrepeat" name="passwordrepeat">
+								{% if 'dontmatch' in error|keys %}<span class="help-block">Die von dir eingegebenen Passwörter stimmen nicht überein.</span>{% endif %}
+							</div>
+
+							<button type="submit" class="btn btn-default">Passwort speichern</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-3">
+		<div class="row">
+			<div class="col-xs-12 text-center gap-bottom-md">
+				<small>Fortschritt Deiner Anmeldung:</small>
+			</div>
+		</div>
+		<div class="row gap-bottom-lg">
+			<div class="col-xs-12 col-md-3 progress-indicator text-center">
+				<div class="step{% if step > 1 %} step-done{% endif %}{% if step == 1 %} step-active{% endif %} center-block">1</div>
+				EMail-Adresse
+			</div>
+			<div class="col-xs-12 col-md-3 progress-indicator text-center">
+				<div class="step{% if step > 2 %} step-done{% endif %}{% if step == 2 %} step-active{% endif %} center-block">2</div>
+				EMail-Verifizierung
+			</div>
+			<div class="col-xs-12 col-md-3 progress-indicator text-center">
+				<div class="step{% if step > 3 %} step-done{% endif %}{% if step == 3 %} step-active{% endif %} center-block">3</div>
+				Benutzername &amp; Passwort
+			</div>
+			<div class="col-xs-12 col-md-3 progress-indicator text-center">
+				<div class="step{% if step == 4 %} step-active{% endif %} center-block">4</div>
+				Fertig!
+			</div>
+		</div>
+	</div>
+</div>

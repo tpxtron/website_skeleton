@@ -1,0 +1,25 @@
+{% extends "_layouts/main.html.twig" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/signup.css" />
+{% endblock %}
+
+{% block content %}
+<div id="container-anmelden">
+
+{% set step = 2 %}
+{% include "login/signup_steps.html.twig" %}
+
+<div class="row">
+	<div class="col-xs-12 col-md-4 col-md-offset-4">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h3>EMail-Verifizierung</h3></div>
+			<div class="panel-body">
+				Du erhältst nun von uns eine EMail mit einem Verifizierungslink. Bitte klicke diesen innerhalb der nächsten 24 Stunden an, um mit der Anmeldung fortzufahren.
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "_layouts/main.html.twig" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/signup.css" />
+{% endblock %}
+
+{% block content %}
+<div id="container-anmelden">
+
+{% set step = 3 %}
+{% include "login/signup_steps.html.twig" %}
+
+<div class="row">
+	<div class="col-xs-12 col-md-4 col-md-offset-4">
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h3>Benutzername und Passwort</h3></div>
+			<div class="panel-body">
+				<form class="form" role="form" method="post" action="/anmelden/{{ key }}">
+					
+					Fast geschafft: Jetzt benötigen wir nur noch einen Benutzernamen und ein Passwort von Dir!
+					<hr />
+					<div class="form-group">
+						<input type="text" class="form-control" id="signup_username" name="signup_username" placeholder="Benutzername" value="{{ username }}">
+					</div>
+					{% if error.usernametooshort %}
+						<div class="alert alert-danger">Der von dir eingegebene Benutzername ist nicht gültig. Er muss mindestens 3stellig sein.</div>
+					{% endif %}
+					{% if error.usernametaken %}
+						<div class="alert alert-danger">Der von dir eingegebene Benutzername wird bereits verwendet. Hast Du vielleicht Dein <a href="/login/vergessen">Passwort vergessen</a>?</div>
+					{% endif %}
+					<div class="form-group">
+						<input type="password" class="form-control" id="signup_password" name="signup_password" placeholder="Passwort (min. 8 Zeichen)">
+					</div>
+					{% if error.passwordtooshort %}
+						<div class="alert alert-danger">Das von dir eingegebene Passwort ist zu kurz. Es muss mindestens 8 Zeichen lang sein.</div>
+					{% endif %}
+					<div class="form-group">
+						<input type="password" class="form-control" id="signup_passwordrepeat" name="signup_passwordrepeat" placeholder="Passwort wiederholen">
+					</div>
+					{% if error.passwordsdontmatch %}
+						<div class="alert alert-danger">Die von dir eingegebenen Passwörter stimmen nicht überein.</div>
+					{% endif %}
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary pull-right">Weiter...</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+{% endblock %}
