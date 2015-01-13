@@ -16,6 +16,7 @@
 			<div class="panel-heading"><h3>EMail-Adresse und Passwort</h3></div>
 			<div class="panel-body">
 				<form class="form" role="form" method="post" action="/anmelden">
+					<input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
 					Für Deine Anmeldung benötigen wir lediglich Deine EMail-Adresse und ein passwort.
 					<hr />
 					<div class="form-group">

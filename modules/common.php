@@ -11,6 +11,13 @@ $sessionModel = new SessionModel();
 $userModel = new UserModel();
 
 $viewData['session']['isLoggedin'] = $sessionModel->isLoggedIn();
+$viewData['csrf_token'] = $sessionModel->getCSRFToken();
+
+if($app->request->isPost()) {
+	if(!isset($_POST['csrf_token']) || $_POST['csrf_token'] != $sessionModel->getCSRFToken()) {
+		die('invalid csrf token');
+	}
+}
 
 // 404
 $app->notFound(function() use($app,$viewData) {

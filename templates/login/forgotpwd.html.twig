@@ -12,6 +12,7 @@
 					<div class="panel-body">
 						<p>Du hast dein Passwort vergessen? Kein Problem. Gib hier deine EMail-Adresse ein und lege im nächsten Schritt ein neues Passwort fest.</p>
 						<form method="post" action="" role="form">
+							<input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
 							<div class="form-group">
 								<label for="email">Deine EMail-Adresse:</label>
 								<input type="email" class="form-control" id="email" name="email">

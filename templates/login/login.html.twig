@@ -10,6 +10,7 @@
 			</div>
 			<div class="panel-body">
 				<form class="form" role="form" method="post" action="/login">
+					<input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
 					{% if error %}
 						<div class="alert alert-danger">Die von Dir eingegebene Kombination aus Benutzername und Passwort ist nicht korrekt. Hast Du vielleicht Dein <a href="/login/vergessen">Passwort vergessen?</a></div>
 					{% endif %}

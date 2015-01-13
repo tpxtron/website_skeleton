@@ -12,6 +12,15 @@ class sessionModel {
 
 	public function __construct() {
 		$this->_userModel = new userModel();
+
+		if(!isset($_SESSION['csrftoken']) || $_SESSION['csrftimeout'] < time()) {
+			$_SESSION['csrftoken'] = uniqid();
+			$_SESSION['csrftimeout'] = time() + 300;
+		}
+	}
+
+	public function getCSRFToken() {
+		return $_SESSION['csrftoken'];
 	}
 
 	public function isLoggedIn() {

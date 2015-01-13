@@ -12,6 +12,7 @@
 					<div class="panel-body">
 						<p>Du kannst nun hier ein neues Passwort für dein Benutzerkonto festlegen.<p>
 						<form method="post" action="" role="form">
+							<input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
 							<div class="form-group{% if 'tooshort' in error|keys %} has-error has-feedback{% endif %}">
 								<label for="password">Dein gewünschtes neues Passwort:</label>
 								<input type="password" class="form-control" id="password" name="password" placeholder="Mindestens 6 Zeichen lang">
