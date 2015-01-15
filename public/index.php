@@ -16,6 +16,12 @@ $view->parserOptions = array(
 );
 $viewData = array();
 
+// I18n config
+$lang = "en_US.utf8";
+$lang = "de_DE";
+setlocale(LC_ALL,$lang);
+bindtextdomain("messages",dirname(__FILE__).'/../locale/');
+
 require_once("../modules/common.php");
 require_once("../modules/homepage.php");
 require_once("../modules/login.php");
