@@ -1,0 +1,20 @@
+.progress-indicator {
+	.step {
+		height: 30px;
+		width: 30px;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+		background-color: #888888;
+		color: white;
+		font-weight: bold;
+		padding-top: 2px;
+	}
+	.step-done {
+		background-color: green;
+	}
+	.step-active {
+		background-color: orange;
+		color: black;
+	}
+}

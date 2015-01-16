@@ -1,2 +1,6 @@
 vendor
 backend/db.php
+public/static/css/common.css
+public/static/css/signup.css
+public/static/css/screen.css
+.sass-cache/
