@@ -10,6 +10,7 @@ $app->config(array(
 $view = $app->view();
 $view->parserExtensions = array(
 	new \Slim\Views\TwigExtension(),
+	new Twig_Extensions_Extension_I18n(),
 );
 $view->parserOptions = array(
 	'autoescape' => true,
