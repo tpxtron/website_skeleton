@@ -44,10 +44,8 @@
 	{% if flash.warning %}<div class="container"><div class="alert alert-warning fade">{{ flash.warning }}</div></div>{% endif %}
 	{% if flash.info %}<div class="container"><div class="alert alert-info fade">{{ flash.info }}</div></div>{% endif %}
 
-	<div class="content">
-		{% block content %}
-		{% endblock %}
-	</div>
+	{% block content %}
+	{% endblock %}
 
     <!-- Footer -->
     <footer>
