@@ -4,6 +4,7 @@
 * create a MySQL database 
 * import the dumped `install.sql` into that database
 * add the database username and password to `backend/db.php`
+* use [Compass](http://compass-style.org/) to compile SASS to CSS (or otherwise it'll look shitty :-))
 
 
 # Translations #
