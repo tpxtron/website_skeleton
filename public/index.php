@@ -7,11 +7,7 @@ $app->config(array(
 	'templates.path' => dirname(__FILE__).'/../templates/',
 ));
 
-// I18n config
-$lang = "en_US.utf8";
-//$lang = "de_DE";
-setlocale(LC_ALL,$lang);
-bindtextdomain("messages",dirname(__FILE__).'/../locale/');
+require_once("../modules/common.php");
 
 $view = $app->view();
 $view->parserExtensions = array(
@@ -23,7 +19,6 @@ $view->parserOptions = array(
 );
 $viewData = array();
 
-require_once("../modules/common.php");
 require_once("../modules/homepage.php");
 require_once("../modules/login.php");
 require_once("../modules/loggedin.php");

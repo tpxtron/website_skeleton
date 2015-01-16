@@ -9,6 +9,7 @@ class sessionModel {
 
 	private $_user;
 	private $_userModel;
+	private $_language;
 
 	public function __construct() {
 		$this->_userModel = new userModel();
@@ -17,10 +18,30 @@ class sessionModel {
 			$_SESSION['csrftoken'] = uniqid();
 			$_SESSION['csrftimeout'] = time() + 300;
 		}
+		if(!isset($_SESSION['language'])) {
+			// TODO: Change the default fallback language, if you'd like to :-)
+//			$this->setLanguage("en_US.utf8");
+			$this->setLanguage("de_DE");
+		} else {
+			$this->setLanguage($_SESSION['language']);
+		}
+
 	}
 
 	public function getCSRFToken() {
 		return $_SESSION['csrftoken'];
+	}
+
+	public function getLanguage() {
+		return $this->_language;
+	}
+
+	public function setLanguage($language) {
+		$this->_language = $language;
+		$_SESSION['language'] = $language;
+
+		setlocale(LC_ALL,$this->_language);
+		bindtextdomain("messages",dirname(__FILE__).'/../locale/');
 	}
 
 	public function isLoggedIn() {
