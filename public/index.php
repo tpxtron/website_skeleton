@@ -7,6 +7,12 @@ $app->config(array(
 	'templates.path' => dirname(__FILE__).'/../templates/',
 ));
 
+// I18n config
+$lang = "en_US.utf8";
+//$lang = "de_DE";
+setlocale(LC_ALL,$lang);
+bindtextdomain("messages",dirname(__FILE__).'/../locale/');
+
 $view = $app->view();
 $view->parserExtensions = array(
 	new \Slim\Views\TwigExtension(),
@@ -16,12 +22,6 @@ $view->parserOptions = array(
 	'autoescape' => true,
 );
 $viewData = array();
-
-// I18n config
-$lang = "en_US.utf8";
-$lang = "de_DE";
-setlocale(LC_ALL,$lang);
-bindtextdomain("messages",dirname(__FILE__).'/../locale/');
 
 require_once("../modules/common.php");
 require_once("../modules/homepage.php");

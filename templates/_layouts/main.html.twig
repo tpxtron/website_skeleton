@@ -55,7 +55,8 @@
 				<div class="col-lg-12">
 					{% block footer %}
 					{% include("_partials/footermenu.html.twig") %}
-						<p class="copyright text-muted small">&copy; {{ "now"|date("Y") }} me | <a href="/impressum">Impressum/Disclaimer</a> | <a href="/datenschutz">Datenschutz</a></p>
+						{# TODO change copyright owner #}
+						<p class="copyright text-muted small">&copy; {{ "now"|date("Y") }} me | <a href="/impressum">{% trans "Impressum/Disclaimer" %}</a> | <a href="/datenschutz">{% trans "Datenschutz" %}</a></p>
 					{% endblock %}
                 </div>
             </div>

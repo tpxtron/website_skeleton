@@ -1,11 +1,9 @@
 {% extends "_layouts/main.html.twig" %}
 
 {% block content %}
-	<div class="content-section-b">
-		<div class="container">
-			<h1>Ups!</h1>
-			<p>Die aufgerufene Seite scheint nicht zu existieren. :-(</p>
-			<p><a href="/">Zur Startseite</a></p>
-		</div>
+	<div class="container">
+		<h1>{% trans "Ups!" %}</h1>
+		<p> {% trans "Die aufgerufene Seite scheint nicht zu existieren. :-(" %}</p>
+		<p><a href="/">{% trans "Zur Startseite" %}</a></p>
 	</div>
 {% endblock %}

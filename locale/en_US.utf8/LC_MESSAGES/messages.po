@@ -4,5 +4,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "LanguageKey"
-msgstr "Translation"
+# Menu
+msgid "Home"
+msgstr "home page"
+
+msgid "Login"
+msgstr "log in"
+
+msgid "Logout"
+msgstr "log out"
+
+
+# Footer
+msgid "Impressum/Disclaimer"
+msgstr "imprint/disclaimer"
+
+msgid "Datenschutz"
+msgstr "privacy"
+
+
+# Breadcrumbs
+msgid "Startseite"
+msgstr "home page"
+
+
+# 404
+msgid "Ups!"
+msgstr "Oops!"
+
+msgid "Die aufgerufene Seite scheint nicht zu existieren. :-("
+msgstr "The page you're looking for doesn't seem to exist. :-("
+
+msgid "Zur Startseite"
+msgstr "Go to the index page"
